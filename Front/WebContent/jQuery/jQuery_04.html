@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	//document객체의 body 프로퍼티에 hi라는 텍스트를 추가하라
+	$(document.body).append("hi");
+	
+	//위와 같은 의미
+	var text = document.createTextNode("Hello");
+	document.body.appendChild(text);
+});
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

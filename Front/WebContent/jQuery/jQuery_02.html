@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 아무것도 쓰지 않는다 -->
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+
+//jQuery Core
+// jQuery();
+// $();
+
+// var J = jQuery;
+// J();
+
+/* 순수 js에서 dom을 사용하기 위한 방법
+ * window.onload = function() {};
+ */
+
+// 권장하는 방법
+//window.onload와 비슷
+//없으면 실행X
+$(document).ready(function() {
+	alert("hello jQeury");
+});
+
+$(function() {
+	alert("hi jQuery");
+});
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

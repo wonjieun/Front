@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+//이걸 해야 jQuery가 먹힘
+$(document).ready(function() {
+	$("p").each(function(){
+		console.log("hi");
+	});
+	
+	console.log("-------------------");
+	$("p").each(function(i, e) {
+// 		console.log(i + " : " + e);
+		console.log("[TEST]");
+		//단독으로 출력해야 tag의 모양으로 보여줌
+		console.log( $(e) );
+		
+	});
+	
+	//e가 this다
+	//코드 자체가 객체. 자바스크립트에서는 함수도 객체의 형태를 띈다
+	console.log("--------------------");
+	$("p").each(function(i, e) {
+		//function함수가 갖고 있는 자신의 객체 this
+		console.log( this );
+		console.log( $(this) );
+	});
+	
+	console.log("--------------------");
+	//내부 동작은 iterator로 하나씩 각각 걸어준다
+	//이벤트 적용할 때 사용한다
+	$("p").each(function(i, e) {
+		$(this).css("border", "1px solid red");
+		
+		//e객체가 stop id를 가지고 있는 객체와 같다면
+		if( $(this).is($("#stop")) ) {
+			return false;
+			//each function을 중단시키는 문법
+		}
+	});
+	//아래처럼 한줄로 해도 되지만 공통된 부분에 이벤트를 걸어주고 싶기 때문에 each를 사용
+// 	$("p").css("border", "1px solid red");
+});
+</script>
+
+</head>
+<body>
+<div>
+	<span>하나</span>
+	<pre>둘</pre>
+	<p>셋</p>
+	<p id="stop">넷</p>
+	<p>다섯</p>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	//div중에 하위 노드의 three class를 가진 요소들
+	$("div").find(".three").css("border", "1px solid red");
+});
+</script>
+
+</head>
+<body>
+
+<div>
+	<span>하나</span>
+	<pre>둘</pre>
+	<p class="three">셋</p>
+	<p>넷</p>
+	<p>다섯</p>
+	<div>
+		<p>여섯</p>
+		<p class="three">일곱</p>
+		<p>여덟</p>
+	</div>
+</div>
+<p class="three">아홉</p>
+
+</body>
+</html>
+

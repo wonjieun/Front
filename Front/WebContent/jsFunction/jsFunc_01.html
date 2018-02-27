@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 맘에 드는 거 하세요 */
+/* 정석적인 방법 */
+function hello() {
+	console.log("안녕하세요");
+}
+hello();
+
+var hi = function hello() {
+ 	console.log("안녕하세요");
+}
+hi(1,2,3);
+
+console.log("-----");
+var f = hello;
+f();
+
+console.log("-----");
+/* 함수 자체가 출력 */
+console.log(f);
+console.log(hello);
+console.log(hi);
+
+console.log("-----");
+function func(data1, data2) {
+	console.log(data1 + ":" + data2);
+	return 123;
+}
+var res = func(11, "Alice");
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

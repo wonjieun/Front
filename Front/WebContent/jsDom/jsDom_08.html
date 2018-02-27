@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+window.onload = function() {
+	var form = document.getElementById("myForm");
+	//list로 반환 id, Tag, Name 세 가지를 Dom tree에서 객체로 얻어올 수 있다.
+	var input1 = document.getElementsByName("data1");
+	
+	console.log(input1);
+	form.removeChild(input1[0]);
+	
+	//특정 상황에 이벤트 발생시 전송을 하도록
+	//이벤트 기반으로 해주어야함
+	//대다수의 시작점은, 트리거가 이벤트가 된다
+	//이벤트가 없으면
+// 	form.submit();
+	
+	/* form객체 내에서 name으로 찾기 */
+	//form객체.name명
+	myForm.data2.value = "DATA1";
+	
+	/* id로 찾기 */
+	//getElement한 효과로 적용
+	test.style.color="red";
+	
+	//dom과 bom, event. 객체가 추가되면 고급화
+};
+
+</script>
+
+</head>
+<body>
+
+<!-- 요소를 구별하기 위한 것. 식별자 -->
+<h1 id="test">form 테스트</h1>
+
+<form id="myForm" action="#" method="get">
+	<input type="text" name="data1" />
+	<input type="text" name="data2" />
+</form>
+
+</body>
+</html>

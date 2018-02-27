@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+#warnMsg {
+	display: none;
+}
+</style>
+
+</head>
+<body>
+
+<div>
+	<lable for="userId">아이디</lable>
+	<input type="text" id="userId" name="userId" />
+	<div id="warnMsg"></div>
+	<button id="btn">버튼</button>
+</div>
+
+<script type="text/javascript">
+// userId 최소, 최대 길이
+var min = 4;
+var max = 10;
+
+userId.addEventListener("blur", function() {
+// 	console.log("userId : onblur");
+	checkLen(min, max);
+});
+
+function checkLen(minLen, maxLen) {
+	//아무것도 입력되지 않으면 그냥 return
+	if( userId.value == "" ) {
+		//숨기기
+		warnMsg.style.display = "none";
+		return;
+	}
+						
+	if( userId.value.length < minLen
+			|| userId.value.length > maxLen) {
+		warnMsg.innerHTML = "아이디는 "
+			+ minLen + "~" + "maxLen"
+			+ "자로 입력하세요";
+		warnMsg.style.display = "block";
+	} else {
+		warnMsg.style.display = "none";
+	}
+	
+	//한 문자라도 입력하면 출력
+	console.log("checkLen called");
+}
+</script>
+
+
+</body>
+</html>

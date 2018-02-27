@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	var $div = $("<div>new Div</div>");
+	//얕은 복사가 된 것인지 깊은 복사가 된 것인지 확인
+	var $div2 = $div.clone();
+	
+	//앞에 추가
+	//둘다 뜨면 깊은 복사, 둘 중 하나 뜨면 얕은 복사
+	$(document.body).prepend($div2);
+	$(document.body).append($div);
+	//뒤에 추가
+// 	$(document.body).append($div2);
+	
+	$div2.html("<h1>changed</h1>");
+// 	$div2.text("<h1>changed</h1>");
+	
+});
+</script>
+
+</head>
+<body>
+<div id="myDiv"></div>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<!--
+window.onload가 필요한 코드
+1. window.onload를 사용하여 head에 적어준다
+2. body의 마지막에 window.onload없이 적어준다
+샘은 1번을 추천한다
+ -->
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 1.
+<script type="text/javascript">
+// onload없이 써도 되지만 document를 사용한다는 것이 문제임
+var btnOk = document.getElementById("btnOk");
+btnOk.onclick = function() {
+	alert("Clicked");
+}
+</script>
+ -->
+</head>
+<body>
+
+<button id="btnOk">확인</button>
+<!-- onclick 속성에서 this 값을 전달하면서 btnClick() 호출 -->
+<!-- caller는 button, callee는 btnClick() -->
+<button onclick="btnClick(this);">click</button>
+
+<!-- 2. -->
+<script type="text/javascript">
+<!-- dom트리를 이용하는 것이기 때문에 dom이 생성된 이후 사용 -->
+<!-- window.onload필요O -->
+var btnOk = document.getElementById("btnOk");
+btnOk.onclick = function() {
+	alert("확인");
+}
+
+<!-- window.onload필요 X -->
+<!-- e 객체(button dom객체 자기자신)로 전달 받음 -->
+function btnClick(e) {
+	alert("Click");
+	console.log(e);
+	<!-- 버튼 click -> 버튼 hello -->
+	e.innerHTML = "hello";
+}
+</script>
+
+</body>
+</html>

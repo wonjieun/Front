@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/* inline요소로 float 속성 확인하기 */
+/* float: left; 를 해주면 span1, span2 사이에 공간이 사라진다 */
+#span1 { background: red; float: left; }
+#span2 { background: blue; float: right; }
+
+body { text-align: center; }
+
+</style>
+</head>
+<body>
+<!-- inline 사용할 때 div를 무조건 씌워주자 -->
+<!-- margin: 0 auto body가 좌우로 민다 -->
+<div style="width: 800px; margin: 0 auto;">
+<span id="span1">SPAN1 요소</span>
+<span id="span2">SPAN2 요소</span>
+<span>안녕!</span>
+</div>
+</body>
+</html>

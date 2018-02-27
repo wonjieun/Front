@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function hello() {
+	alert("This is common.");	
+}
+
+</script>
+</head>
+<body>
+
+<!-- 안쪽에서 "HI"를 사용하고 싶다면 ''로 변경 or 바깥쪽을 ''로 변경 -->
+<!-- 즉, "alert('Hi');" 또는 'alert("Hi");' -->
+<div onclick="alert('Hi');">onclick event1</div>
+<div onclick="(function(){alert('Hello');})();">onclick event2</div>
+<div onclick="function halo(){alert('Halo');} halo();">onclick event3</div>
+<!-- => 간단한 코드이지만 보기가 힘들다 -->
+
+<!-- 자바스크립트 영역에 hello()정의 해준다. (간단) -->
+
+<div onclick="hello();">onclick!</div>
+
+</body>
+</html>

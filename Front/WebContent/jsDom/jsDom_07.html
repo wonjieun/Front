@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+//로드되고 난 이후에 도큐먼트까지 불러내고 난 이후에 작업을 해주는 것
+window.onload = function() {
+	//TagName으로 가져온다
+	//TagName이 여러개가 있을 수 있기 때문에 Element"s"
+	var h3 = document.getElementsByTagName("h3");
+	console.log(h3);
+	
+	h3[0].innerHTML = "HI";
+	h3[2].innerHTML = "Hello";
+	
+	console.log("----------------")
+	//요소가 하나더라도 배열로 반환
+	var h1 = document.getElementsByTagName("h1");
+	console.log(h1);
+	
+	h1[0].innerHTML = "h1";
+	
+	//한 문장으로 쓸 수 있다
+	document.getElementsByTagName("h1")[0].innerHTML = "h1";
+	
+	//변수에 저장하는 이유는 나중에 쓰기 때문이다.
+	//하지만 한번 하고 끝날 것은 한줄로 사용하자.
+	
+	console.log("----------------")
+	h3[1].remove();
+	console.log(h3);
+};
+
+</script>
+
+</head>
+<body>
+
+<h1>제목</h1>
+<h3>Javascript</h3>
+<h3>DOM</h3>
+<h3>GetTagName</h3>
+
+</body>
+</html>

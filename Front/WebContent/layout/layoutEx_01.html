@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+* { font-size: 30px; }
+
+div {
+	/* 너비, 높이를 고정영역으로 지정해주면 해당 영역만큼만 적용 */
+	/* 고정영역 외에 나머지 공간은 margin으로 처리 */
+	width: 100px;
+	height: 100px;
+	
+	/* margin 주황색, padding 연두색 */
+	padding: 10px;
+	/* border는 margin과 같은 취급을 받는다 */
+	/* block을 만든 후에 그 안에 inline을 넣어준다 */
+	/* inline은 단독으로 쓰이지 않는다 */
+	border: 1px solid black;
+	margin: 10px;
+	
+	/* 상하 마진 존재 X, 좌우 마진 존재O */
+	/* 내부 사이즈만큼 자동으로 압축 */
+/* 	display: inline; */
+}
+</style>
+</head>
+<body>
+<!-- 개발자도구의 "하나"와 "둘"사이의 margin사이 살짝 뜨는 부분이 엔터값 -->
+<div>하나</div>
+<!-- <div>하나</div><br> 개행 margin과 padding은 겹침
+  이것이 바로 inline의 특성-->
+<div>둘</div>
+<div>셋</div>
+<div>넷</div>
+<div>다섯</div>
+</body>
+</html>

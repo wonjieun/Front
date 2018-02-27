@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+/* 요즘에는 잘 안씀 */
+p::first-line { color: blue; }
+p::first-letter {
+	color: red;
+	font-size: 20px;
+}
+
+/* span의 앞 쪽에 */
+span::before {
+	/* 개발자 도구를 확인하면 element로 확인되지 않는다 */
+	/* element로 들어가지 않고 style로 들어간다 */
+	/* 없는 요소를 있는 것처럼 집어 넣는 것 = pseudo */
+	content: "span\A before\A";
+	color: red;
+	background-color: gray;
+	/* \A(개행)이 적용되도록 하려면 */
+	/* 개행되는 것을 pre tag가 인식하는 것처럼 사용하겠다 */
+	white-space: pre;
+}
+
+div::after {
+/* 	content: url(mi.jpg); */
+	/* 내용이 없기 때문에 이미지가 보이지 않는다 */
+	/* 인라인 요소는 내용물을 채우지 않으면 width, height지정 불가 */
+	/* 블락 요소로 하면 width, height지정 가능 */
+	content: "";
+	width: 400px;
+	height: 400px;
+	
+	display: inline-block;
+	background-image: url(pretty.jpg);
+	background-size: 400px 400px;
+}
+</style>
+
+</head>
+<body>
+<p>첫 번째(p)</p>
+<span>두 번째(span)</span>
+<div>세 번째(div)</div>
+<p>네 번째(p) This is p tag.<br>
+열심히 하자<br>
+취직하자</p>
+</body>
+</html>

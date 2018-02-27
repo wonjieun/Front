@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- first-child이자 last-child라고 볼 수 있음 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+/* 인라인 방식이 임베디드 방식보다 우선순위가 높기 때문에 적용X */
+#pId { color: red; }
+/* .pClass { color: blue; } */
+
+/* 가장 높은 우선순위인 !important를 적용 */
+.pClass { color: blue !important; }
+</style>
+
+</head>
+<body>
+<p id='pId' class='pClass'
+	style="color: orange;">
+	!important test
+</p>
+
+</body>
+</html>

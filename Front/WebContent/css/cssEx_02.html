@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 인라인 방식 스타일이 우선적으로 적용 
+	그 외에 곳에 아래 style 적용 -->
+<!-- 우선순위: 인라인방식 > 임베디드 방식 -->
+<style type="text/css">
+
+/* 임베디드 방식으로 css스타일 적용 */
+/* 태그 선택자 이용 */
+p { color: blue; }
+/* css의 tag selector : p태그
+	스타일 태그에서 문장을 해석하여 처리 */
+	
+/* # : id selector */
+/* id는 하나만 있다고 가정(여러 개일 경우 하나만 적용, 나머지 무시) */
+/* 아이디 선택자 이용 */
+#hi { color: green; }
+
+/* 우선순위: tag selector < id selector */
+
+</style>
+
+</head>
+<body>
+
+<p> 안녕하세요 </p>
+<p id="hi">하이</p>
+
+<!-- p태그 요소에 인라인방식으로 css 스타일 적용하기 -->
+<p style='color: red;'> 안녕하세요 </p>
+
+
+</body>
+</html>

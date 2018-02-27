@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	console.log( $("div").css("width"));
+	console.log( $("div").css("width"));
+	
+	$("div").css({
+			"width": "200px",
+			"height": "150px",
+			"border": "1px solid red"
+	});
+	
+	//[keys]
+	//개발자도구 확인했을 때 jSON스타일로 객체를 표현하고 있음
+	var styleInfo = $("div").css(["width", "height"]);
+	console.log("-----");
+	console.log(styleInfo);
+	console.log(styleInfo.width);
+	console.log(styleInfo.height);
+
+});
+
+</script>
+
+</head>
+<body>
+<div style="width: 300px; height: 200px;">
+	<p>하나</p>
+	<p>셋</p>
+	<p>넷</p>
+</div>
+</body>
+</html>
+

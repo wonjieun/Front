@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+.blue { color: blue; }
+.size3 { font-size: 3em; }
+
+p.blue { font-size: 1em; color: gray; }
+
+</style>
+
+</head>
+<body>
+
+<p class="blue"> p태그 </p>
+<div class="size3">
+	div 태그
+	<!-- 부모요소의 영향을 받아 size3 스타일 적용 -->
+	<!-- 영향을 받고 싶지 않으면 p.blue style을 지정하던지 id 설정 -->
+	<p class="blue"> div내부 p태그 </p>
+</div>
+<span class="blue size3"> span태그 </span>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$("p").addClass("red");
+	$("p").addClass("borderGray");
+	
+	//class가 "전부" 사라짐
+// 	$("p").removeClass();
+	
+	//red class가 사라짐
+	$("p").removeClass("red");
+	$("p").attr("class", "blue");
+	$("p").eq(0).attr("id", "p1");
+	console.log( $("#p1").attr("class") );
+});
+</script>
+<style type="text/css">
+.red { color: red; }
+.blue { color: blue; }
+.borderGray { border: 1px solid gray; }
+</style>
+
+</head>
+<body>
+<div style="width: 300px; height: 200px;">
+	<p>하나</p>
+	<p>셋</p>
+	<p>넷</p>
+</div>
+</body>
+</html>
+

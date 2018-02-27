@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	//div 노드를 찾아서 집어 넣기
+	//div는 그냥 selector
+	//selector가 아닌 <div> tag를 쓰면 div만들어짐
+	//자신이 만들고 싶은 tag의 이름을 <div>방식으로 만들어주면 됨
+	var $div = $("<div>new Div</div>");
+	console.log($div);
+	
+	$("#myDiv").append($div);
+/* div id="myDiv"
+ * 		div new Div
+ * 예) 
+ * onclick()
+ *		$("<div>...")
+ */
+
+	//html함수를 이용해서 setter
+ 	$("#myDiv").html("<div>html Div</div>");
+ 	
+	var html = $("#myDiv").html();
+	//뒤에 추가
+	html += "<div>append node</div>";
+	$("#myDiv").html(html);
+});
+</script>
+
+</head>
+<body>
+<!-- myDiv 안쪽에 집어넣는 방식을 사용하겠다. -->
+<div id="myDiv"></div>
+</body>
+</html>
+

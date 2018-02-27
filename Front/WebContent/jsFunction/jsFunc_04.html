@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* callback function */
+// 연산 로직 함수
+function add(n1, n2, callback) {
+	var res = n1 + n2;
+	
+	/* 원래 리턴 결과를 하는 것이 적절 */
+// 	console.log(res);
+// 	return(res);
+	callback(res);
+}
+
+// 출력 로직 함수
+function printRes(result) {
+	console.log("결과값: " + result);
+}
+
+function alertRes(result) {
+	alert("덧셈결과: " + result);
+}
+
+add(11, 22, printRes);
+add(11, 22, alertRes);
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

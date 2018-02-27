@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+/* h1인 두번째, 여섯번째 선택되고, 바로 다음 형제 selector가 p라면 p에 적용*/
+h1 + p { background: yellow; }
+/* h1인 두번째, 여섯번째 선택되고, 다음 형제 selector들이 p라면 p에 적용*/
+h1 ~ p { border: 1px solid red; }
+
+/* h1 + .forth { color: chocolate; } */
+h1 ~ .forth { color: chocolate; }
+
+</style>
+
+</head>
+<body>
+	<p>첫번째</p>
+	<h1>두번째</h1>
+	<p>세번째</p>
+	<p class='forth'>네번째</p>
+	<p>다섯번째</p>
+	<h1>여섯번째</h1>
+	<p>일곱번째</p>
+</body>
+</html>

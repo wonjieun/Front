@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function hello() {
+	console.log("안녕");
+}
+function greeting() {
+	console.log("반가워요");
+}
+function action(fn) {
+	fn();
+	console.log("<<fn>>" + fn);
+	return fn;
+}
+/* hello라고 하는 함수의 결과물을 전달 */
+//action(hello());
+/* hello라는 함수를 전달*/
+action(hello);
+
+/* action(hello) = hello
+   즉 hello() */
+action(hello)();
+
+action(action(action(greeting)));
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

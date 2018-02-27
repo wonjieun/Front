@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	//div 직접적인 자식들
+// 	$("div").children().css("border", "1px solid blue");
+	//div 직접적인 자식들 중 strong class를 가진 노드
+// 	$("div").children(".strong").css("border", "1px solid red");
+	
+	//selector 변경
+	//strong class를 가진 부모
+// 	$(".strong").parent().css("border", "1px solid blue");
+	//strong class를 가진 element중 ul tag의 부모를 가진 노드
+// 	$(".strong").parent("ul").css("border", "1px solid red");
+	
+	//strong class 계층 구조의 모든 부모 노드
+// 	$(".strong").parents().css("border", "1px solid blue");
+	
+	//strong class 이전/이후의 형제 노드들
+	$(".strong").prev().css("border", "1px solid #ccc");
+	$(".strong").prevAll().css("border", "1px solid #ccc");
+	$(".strong").next().css("border", "1px solid #ccc");
+	$(".strong").nextAll().css("border", "1px solid #ccc");
+});
+</script>
+
+</head>
+<body>
+
+<div>
+	<p>셋</p>
+	<p class="strong">넷</p>
+	<p>다섯</p>
+	<p>여섯</p>
+	<ul>
+		<li>셋</li>
+		<li class="strong">넷</li>
+		<li>다섯</li>
+		<li>여섯</li>
+	</ul>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 아무것도 쓰지 않는다 -->
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	//$("#p1").css() : jQuery 문법을 사용
+	console.log( $("#p1") );
+	
+	//js로 얻어온 것을 jQuery로 바꾼 것
+	var p1 = document.getElementById("p1");
+	console.log($(p1));
+	
+	/* style이라는 property가 아니라 css함수를 사용하여 style 지정 */
+	//id
+	$("#p1").css("border", "1px solid red");
+	//class
+	$(".p2").css("color", "blue");
+	//p tag의 마지막 자식
+	$("p:last-child").css("color", "gray");
+	
+	//자식
+	$("div > :last-child").css("border", "1px dotted red");
+	//하위
+	$("div :last-child").css("font-size", "2em");
+});
+</script>
+
+</head>
+<body>
+
+<div>
+
+	<p id="p1">하이</p>
+	<p class="p2">Hello</p>
+	<p id="p3">Welcome</p>
+
+</div>
+
+</body>
+</html>

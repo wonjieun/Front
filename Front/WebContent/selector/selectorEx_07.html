@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+h1[title] { color: red; }
+h1[title="greeting"] { border: 1px solid blue; }
+/* h1[class="abc"] { background: yellow; } 안됨 */
+/* h1[class="abc st"] { background: yellow; } 됨 */
+h1[class~="abc"] { font-style: italic; }
+/* 문장전체의 시작과 끝 (단어의 시작과 끝 아님) */
+h1[class^='te'] { font-size: 20px; }
+h1[class$='st'] { border: 1px dotted orange; }
+h1[class*='c '] { background: tomato; }
+h1[class|='abc'] { font-size: 50px; }
+</style>
+
+</head>
+<body>
+<!-- .abc -->
+<h1 class="abc test dd" title='hi'>Hello</h1>
+<h1 class="abc st">안녕하세요</h1>
+<h1 class="abc-ttt" title='greeting'>반가워요</h1>
+</body>
+</html>

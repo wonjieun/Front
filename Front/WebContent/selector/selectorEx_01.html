@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+/* 전체 selector: 모든 태그들에 적용한다 */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p { margin: 20px; }
+
+span { margin: 0 10px; }
+
+div {
+	/* top left-right bottom */
+	/* 크기가 커지면 내용물의 크기(padding)을 축소 */
+	/* 외부 요소와의 관계 */
+	margin: 5px 20px 30px;
+	/* 5px 검정색 테두리 */
+	/* 크기가 커지면 내용물의 크기(padding)을 축소 */
+	/* 외부 요소와의 관계 */
+	border: 5px solid black;
+	/* 내부 공간 생성 */
+	padding: 20px;
+	/* background의 속성이 많다 */
+	background-color: red;
+}
+</style>
+
+</head>
+<body>
+
+<p>p태그 </p>
+<span>span태그</span>
+<div>div태그</div>
+
+
+</body>
+</html>

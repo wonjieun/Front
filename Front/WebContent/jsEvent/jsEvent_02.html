@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+/* onload가 없으면 head부터 해석하여 body해석
+ * dom완성 되기 전에 btnOk에 element를 받아오기 때문에 btnOk는 null
+ */
+//HTML문서가 해석이 되면서 body를 해석하여 내용을 띄워주고 난 후 동작
+window.onload = function() {
+// 	var btnOk = document.getElementById("btnOk");
+	// btnOk만 해도 id를 찾아간다. 위 문장을 자동으로 수행
+	/* document.getElementById("btnOk").onclick의 축약코드
+	 * btnOk.onclick
+	 */
+	btnOk.onclick = function() {
+		alert("Clicked");
+	}
+}
+</script>
+</head>
+<body>
+
+<button id="btnOk">확인</button>
+
+</body>
+</html>

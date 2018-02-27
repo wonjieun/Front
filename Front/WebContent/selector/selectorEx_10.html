@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- first-child이자 last-child라고 볼 수 있음 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+:root { color: #666; }
+/* li가 두 번째 자식이 맞다면 (조건이라 생각하자) */
+li:nth-child(2) { color: red; }
+li:nth-last-child(2) { color: blue; }
+
+:first-child { border: 1px solid red; }
+:last-child { border: 1px dotted blue; }
+
+li:only-child { background: tomato; }
+ul:only-of-type { background: yellow;}
+
+/* title의 폰트 스타일 적용 */
+/* .title { font-style: italic; } */
+/* body, html에서 상속받은 italic이 있기 때문에 
+   부모요소에도 폰트 스타일이 전부 적용된다 */
+:not(.title) { font-style: italic; }
+
+/* li중에서 only조건이 없는 요소들 */
+li:not(.only) { font-size: 30px; }
+</style>
+
+</head>
+<body>
+<h1 class="title">가상순서 클래스 선택자</h1>
+<hr>
+<h2>웹 언어</h2>
+<ul>
+	<li>HTML5</li>
+	<li>CSS3</li>
+	<li>Javascript</li>
+	<li>jQuery</li>
+	<li>JSP</li>
+</ul>
+<ul>
+	<!-- 첫번째자식이자 마지막자식. 마지막자식 속성으로 덮어씌워짐 -->
+	<li class="only">HTML5</li>
+</ul>
+<ul>
+	<li>CSS3</li>
+	<li>선택자</li>
+	<ul>
+		<li>id 선택자</li>
+		<li>class 선택자</li>
+	</ul>
+</ul>
+</body>
+</html>

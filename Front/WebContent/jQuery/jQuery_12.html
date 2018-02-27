@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+// id or class 사용 금지
+// p tag를 하나 생성
+// 내용은 "둘"
+// insertBefore를 이용해서
+// 순서에 맞게 추가
+
+$(document).ready(function() {
+	$("<p>둘</p>").insertBefore($("div p").eq(1));
+});
+</script>
+
+</head>
+<body>
+<div>
+	<p>하나</p>
+	<p>셋</p>
+	<p>넷</p>
+</div>
+</body>
+</html>
+

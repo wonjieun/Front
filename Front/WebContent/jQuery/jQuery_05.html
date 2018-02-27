@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+
+</head>
+<body>
+
+<div>
+	<span>하나</span>
+	<pre>둘</pre>
+	<p>셋</p>
+	<p>넷</p>
+	<p>다섯</p>
+</div>
+
+<!-- 어제는 id selector이용, 오늘은 tag selector 이용 -->
+<script type="text/javascript">
+
+//jQuery dom
+//js에서 특수기호 중에 $를 포함할 수 있다
+//순수 js에서는 잘 쓰지 않고, 라이브러리에서는 $를 많이 사용
+var $p = $("p");
+$p.css("border", "1px solid red");
+console.log($p);
+console.log($p.length);
+console.log($p[0]); //jQuery Object? javascript Object?
+// jQuery Object = $(javascript Object)
+</script>
+
+</body>
+</html>
+

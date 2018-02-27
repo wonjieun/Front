@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#pDiv {
+	width: 600px;
+	height: 600px;
+	border: 1px solid #ccc;
+}
+.box {
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+}
+.absolute {
+	position: absolute;
+}
+#a1 {
+	/* 화면 평면상에 앞으로 100만큼 앞으로 나온다. */
+	/* 픽셀이 아닌 수치값 */
+	z-index: 100;
+	background-color: orange;
+	left: 50px; /* (absoulte일 때)왼쪽과의 50px만큼의 간격
+					즉, 오른쪽으로 50px만큼 이동 */
+}
+#a2 {
+	background-color: blue;
+	left: 100px; /* (absoulte일 때)왼쪽과의 100px만큼의 간격 */
+	/* right: 100px; (absoulte일 때)오른쪽과의 100px만큼의 간격 */
+	top: 50px; /* (absoulte일 때)위쪽과의 50px만큼의 간격 */ 
+}
+/* block 모델을 유지 */
+.relative {
+	position: relative;
+	left: 100px; /* (relative일 때)현재 위치에서 왼쪽과의 100px만큼의 간격 */
+	top: 150px;
+}
+.fixed {
+	position: fixed;
+	bottom: 300px;
+	right: 50px;
+}
+</style>
+</head>
+<body>
+<!-- body 대신에 wrapper 역할 -->
+<div id='pDiv'>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ante augue, scelerisque eget ornare pretium, viverra sit amet nisl. Proin vitae luctus arcu, id eleifend diam. Phasellus convallis rutrum ligula. Integer eget mollis tellus, at pharetra mi. Ut elementum tincidunt augue, ac porta justo sodales ac. Duis interdum egestas ex, vitae maximus metus lobortis et. Quisque feugiat magna sit amet neque egestas, sed sagittis sem pharetra. Mauris sollicitudin pellentesque nibh, non sollicitudin ante euismod consequat. Curabitur condimentum sit amet odio vitae elementum. Mauris efficitur, ligula et ultrices auctor, tortor diam ultrices purus, nec venenatis tellus eros at elit. In pharetra placerat enim, at aliquam nunc viverra eget. Sed eu nulla non sem semper porta ac non justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<!-- box 모델이라 상하는 뒤로 밀리고 좌우는 고정 -->
+<!-- 상하에 다른 element가 있기 때문에 좌우에는 element가 없음 -->
+<div id="a1" class='box absolute'>절대위치 박스1</div>
+<div id="a2" class='box absolute'>절대위치 박스2</div>
+<!-- p tag에 의해서 밀려나고 밀려난 자리로 부터 상대위치를 설정 -->
+<div class="box relative">상대위치 박스</div>
+<!-- 다른 element와 상관없이 떠다님 -->
+<div class="box fixed">고정위치 박스</div>
+</div>
+</body>
+</html>
