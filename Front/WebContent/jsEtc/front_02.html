@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- js는 넣지 않는다 -->
+<style type="text/css">
+* {
+/* 	<ul>의 margin을 없애줌 */
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "돋움", dotum, "굴림", gulim, arial, helvetico, sans-serif;
+	font-size: 18px;
+	line-height: 1.8;
+}
+
+.wrapper {
+	width: 800px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
+.header {
+	/* text-align: center;*/
+	text-align: left;
+ 	background: #eee;
+	
+	font-size: 2em;
+	font-weight: bold;
+	
+	/* 영역을 키우기 */
+	padding: 50px 30px;
+}
+
+.logo {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	vertical-align: middle;
+	
+	background-image: url('./apple.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+/* 	background: #eee; */
+}
+
+.nav {
+	float: left;
+	width: 140px;
+}
+
+.content {
+	float: right;
+	width: 620px;
+}
+
+.clear {
+	clear: both;
+	height: 0px;
+	overflow: hidden;
+}
+
+.footer {
+	text-align: center;
+	font-size: 12px;
+/*  margin: 20px; */
+ 	padding: 20px;
+	/* <hr>과 비슷한 역할 */
+	border-top: 1px solid #999;
+}
+
+</style>
+
+</head>
+<body>
+<div class="wrapper">
+
+	<div class="header">
+		<div class="logo">
+			Logo 사이트명
+		</div><!-- logo end -->
+	</div><!-- header end -->
+	
+	<div class="container">
+		<div class="nav">
+			<ul class="nav-list">
+				<li class="nav-item">
+					<a href="./front_01.html" class="nav-link">menu1</a>
+				</li>
+				<li class="nav-item">
+					<a href="./front_01.html" class="nav-link">menu2</a>
+				</li>
+				<li class="nav-item">
+					<a href="./front_01.html" class="nav-link">menu3</a>
+				</li>
+			</ul>
+		</div><!-- nav end -->
+		
+		<div class="content">
+			<h3>Lorem ipsum</h3> 
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue sagittis libero eu volutpat. In eget nulla felis. Nam tortor odio, tincidunt id leo at, sagittis laoreet mi. Praesent consequat blandit tortor vel dictum. Mauris malesuada lacinia maximus. Vestibulum tortor arcu, pharetra eget convallis porta, facilisis vel diam. Aliquam viverra lacinia quam ut vestibulum. In ac malesuada elit. Nam dictum at mauris nec blandit. Sed eleifend, ligula nec feugiat pulvinar, ipsum urna faucibus dui, in vulputate ipsum risus quis libero. Fusce est diam, accumsan et gravida accumsan, auctor id arcu.</p>
+			<h3>Donec venenatis</h3>
+			<p>Donec venenatis ipsum vitae tempor porttitor. Nulla interdum est et nulla finibus pellentesque. Nunc eu nisl elit. Cras condimentum massa ac magna semper ornare. Sed consectetur gravida pellentesque. In augue felis, venenatis vel nisl non, ullamcorper feugiat elit. Donec accumsan auctor augue et bibendum. Cras at urna nisl. Ut non nunc quis ligula tincidunt pellentesque ac in mauris. Phasellus nec odio eu odio ultrices laoreet. Vestibulum ac efficitur turpis, quis facilisis urna.</p>
+			<h3>Morbi eget</h3>
+			<p>Morbi eget enim at nibh auctor laoreet. Nulla facilisi. Ut sit amet lorem bibendum sem laoreet bibendum. Pellentesque egestas libero sapien, eu interdum purus eleifend id. Nulla vitae malesuada ipsum, vel tempus felis. Etiam orci urna, convallis quis semper quis, vulputate sagittis ligula. Fusce finibus tortor et ante bibendum tincidunt. Praesent a consectetur erat. Mauris aliquet tincidunt lectus non efficitur. Nam massa augue, elementum feugiat augue eu, aliquam pulvinar velit. Cras felis erat, mattis in tortor et, euismod lacinia nisi. Suspendisse quis nisl et quam venenatis blandit nec in odio. Fusce consequat est tortor, sit amet porta ligula viverra id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer quis vestibulum ligula, sed fringilla ligula. Vestibulum sed ligula diam.</p>
+			<h3>Vestibulum sollicitudin</h3>
+			<p>Vestibulum sollicitudin magna a diam porttitor auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pulvinar dui tellus, id lobortis nunc eleifend ac. Suspendisse rutrum auctor scelerisque. Pellentesque quis scelerisque diam. Vestibulum et hendrerit ex, eget posuere orci. Vestibulum vitae orci orci. Vestibulum ornare arcu in purus rhoncus, eget laoreet quam porttitor. Mauris convallis nisl a ligula ultrices, id pretium lacus elementum. Fusce id augue sit amet sem gravida mollis quis non nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nec consequat est. Aenean egestas molestie vulputate. Etiam maximus neque libero.</p>
+			<h3>Suspendisse suscipit</h3>
+			<p>Suspendisse suscipit bibendum malesuada. Vivamus id suscipit arcu, non maximus augue. Curabitur fermentum odio at magna feugiat, ac feugiat dui dictum. Suspendisse non nulla lacinia, hendrerit velit at, vehicula nibh. Cras volutpat, ligula et ultricies venenatis, velit erat porta sapien, nec placerat eros nulla eget augue. Aliquam tincidunt dui at velit tincidunt egestas. Donec ornare malesuada nunc, posuere lobortis eros. Morbi maximus est quam, non pharetra sapien elementum ut. Praesent sit amet nisi quis sem iaculis posuere. Vestibulum iaculis est purus, tempus fringilla tellus tristique vitae. Maecenas volutpat, ipsum ut malesuada mollis, enim massa porta diam, nec congue tellus sem vitae tortor. In gravida condimentum tortor, quis blandit quam porttitor ut. Maecenas massa enim, sagittis ac lorem congue, volutpat ultricies orci.</p>
+		</div><!-- content end -->
+	</div><!-- container end -->
+		
+	<div class="clear"></div>	
+		
+	<div class="footer">
+		<p>&copy; jieun.</p>
+	</div><!-- footer end -->
+		
+</div><!-- wrapper end -->
+</body>
+</html>

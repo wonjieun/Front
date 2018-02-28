@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+/* h1의 기본 마진 생김 (브라우저마다 다름)
+ * 따라서, 기본적으로 0으로 초기화
+ * margin, padding을 설정 해주어야 함
+ */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#wrap {
+	width: 800px;
+	border: 1px solid #ddd;
+	margin: 0 auto;
+}
+
+#header {
+	text-align: center;
+	background-color: tomato;
+	/* padding을 준 효과 */
+	/* 폰트 기본 사이즈 16px */
+	/* 48px로 */
+	/* 기본 line-height는 1.2배 */
+	/* em으로 많이 적는다. */
+	/* 상속 받은 크기의 배율이라 잘못하면 너무 커지기 때문에 숫자를 직접 주는 것이 더 좋다 */
+	line-height: 3;
+}
+
+#nav {
+	float: left;
+	width: 28%;
+	background-color: gray;
+}
+
+#content {
+	float: right;
+	width: 70%;
+	background-color: green;
+}
+
+#footer {
+/* float속성 없애는 방법 1
+ 	clear: both; */
+	background: purple;
+	text-align: center;
+}
+
+/* float속성 없애는 방법 2
+  안보이는 경계선 생성
+  재활용 가능 */
+.clearBox {
+	clear: both;
+	width: 0;
+	height: 0;
+}
+</style>
+
+</head>
+<body>
+
+<!-- 본문내용을 적을 때 wrap or wrapper라고 많이 적는다 -->
+<div id="wrap"> <!-- wrap or wrapper -->
+	<div id="header">
+		<h1>헤더 영역, 로고 삽입, 사이트명</h1>
+	</div><!-- header end -->
+
+	<div id="nav">
+		사이드바<br>
+		메뉴1<br>
+		메뉴2<br>
+		메뉴3
+	</div><!-- nav end -->
+	
+	<div id="content">
+		컨텐츠<br>
+		본문&nbsp;&nbsp;&nbsp;&nbsp;내용<br>
+		
+		&gt;<br>	<!-- greater than -->
+		&lt;<br>	<!-- less than -->
+		&amp;<br>	<!-- ampersand -->
+		&quot;<br>  <!-- quotation mark -->
+		&copy;<br>  <!-- copyright -->
+	</div><!-- content end -->
+	
+	<div class="clearBox"></div>
+	
+	<div id="footer">
+		저작권, 사업자번호, 개인정보취급방침, 이용약관 등
+	</div><!-- footer end -->
+	
+</div><!-- wrap end -->
+</body>
+</html>

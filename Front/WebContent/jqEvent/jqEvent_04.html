@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+//jqEvent_03.html의 다른 방법
+function sayHi() {
+	alert("hola");
+}
+function addRed() {
+	$(this).css("color", "red");
+}
+function addBlue() {
+	$(this).css("color", "blue");
+}
+
+$(document).ready(function() {
+// 	$("button").on({
+// 		click: sayHi,
+// 		mouseenter: addRed,
+// 		mouseleave: addBlue
+// 	});
+	$("button").one({
+		click: sayHi,
+		mouseenter: addRed,
+		mouseleave: addBlue
+	});
+// 	$("button").off("mouseleave");
+});
+
+</script>
+
+</head>
+<body>
+<div>
+	<button id="btnOk">확인</button>
+	<button id="btnAlert">알림</button>
+</div>
+</form>
+
+</body>
+</html>

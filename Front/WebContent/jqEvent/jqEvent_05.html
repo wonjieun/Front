@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	
+<style type="text/css">
+.red { color: red; }
+</style>
+	
+<script type="text/javascript">
+$(document).ready(function() {
+	//ADD button을 누른만큼 중첩
+
+	$("#btnOk").click(function() {
+		$("button").eq(0).on({
+			click: sayHi,
+			mouseenter: addRed,
+			mouseleave: removeRed
+		});	
+	});
+	
+	$("#btnRemove").click(function() {
+		$("button").eq(0).off({
+			click: sayHi,
+			mouseenter: addRed,
+			mouseleave: removeRed
+		});	
+	});
+});
+
+function sayHi() {
+	alert("HOLA");
+}
+function addRed() {
+	$(this).addClass("red");
+}
+function removeRed() {
+	$(this).removeClass("red");
+}
+</script>
+
+</head>
+<body>
+<div>
+	<button id="btnOk">확인</button>
+	<button id="btnAdd">ADD</button>
+	<button id="btnRemove">REMOVE</button>
+</div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#btnOk").bind("click", function() {
+		alert("HIHI");
+		$("div").off();
+	});
+	
+	$("div").on("click", "#btnAlert", function() {
+		alert("HOLA");
+		//btnOk click event 발생 X
+		$("#btnOk").unbind("click");
+	});
+
+// 	$("#btnAlert").on("click", function() {
+// 		alert("HOLA");
+// 	});
+});
+
+</script>
+
+</head>
+<body>
+<div>
+	<button id="btnOk">확인</button>
+	<button id="btnAlert">알림</button>
+</div>
+</form>
+
+</body>
+</html>

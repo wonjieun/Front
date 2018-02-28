@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	
+<style type="text/css">
+.red {	color: red; }
+</style>
+	
+<script type="text/javascript">
+//확인 버튼을 클릭할 때마다 class="red"가 들어갔다 빠졌다 반복
+function toggleRed() {
+	$(this).toggleClass("red");
+}
+// $(document).ready(function() {
+// 	$("#btnOk").on('click', toggleRed);
+// });
+//one은 event가 딱 한번 동작
+$(document).ready(function() {
+	$("#btnOk").one('click', toggleRed);
+});
+</script>
+
+</head>
+<body>
+<div>
+	<button id="btnOk">확인</button>
+</div>
+</form>
+
+</body>
+</html>

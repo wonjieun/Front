@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+//DOM tree가 다 짜여지고 난 후에 사용
+$(document).ready(function() {
+	//event 걸어주기
+	$("#btnOk").click(function() {
+		alert("hello");
+	});
+	$("#btnAlert").click(function() {
+// 		$("#btnOk").click();
+		//click event를 발생. 그냥 click과 같다
+		$("#btnOk").trigger("click");
+		$(this).html("<h1 style='color: red;'>Change</h1>");
+	});
+});
+
+</script>
+
+</head>
+<body>
+
+<button id="btnOk">확인</button>
+<button id="btnAlert">알림</button>
+
+</form>
+
+</body>
+</html>
