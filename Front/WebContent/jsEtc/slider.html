@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>slider</title>
+
+<script  src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<style type="text/css">
+#sliderbox {
+   width: 300px;
+   height: 200px;
+   border: 1px solid #000;
+   
+   position: relative; /*부모요소*/
+   overflow: hidden;
+}
+#slider li {
+   position: absolute; /*자식요소*/
+   left: 300px;
+}
+#slider {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#slider li img {
+   width: 300px;
+   height: 200px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="sliderbox">
+   <ul id="slider">
+      <li><img src="http://i.imgur.com/viuPHoS.gif"/></li>
+      <li><img src="http://i.imgur.com/i7sW1WN.jpg"/></li>
+      <li><img src="http://i.imgur.com/MrZcQnN.jpg"/></li>
+      <li><img src="http://i.imgur.com/hhsrPwq.jpg"/></li>
+      <li><img src="http://i.imgur.com/RstXW7v.jpg"/></li>
+      
+   </ul>
+</div>
+
+<script type="text/javascript">
+$("#slider li:first-child").css("left", 0); /*한장이 옆으로 옮겨진다*/
+
+var curSlide = 0;
+var $slide_list = $("#slider li")
+
+$("#sliderbox").on("click", function() {
+   var nextSlide = (curSlide+1) % $slide_list.length;
+   
+   //슬라이드 코드
+   $slide_list.eq(nextSlide).css("left", "300px");
+   $slide_list.eq(curSlide).animate({"left":"-=300px"});
+   $slide_list.eq(nextSlide).animate({"left":"-=300px"});
+   
+   curSlide = ++curSlide % $slide_list.length;
+});
+
+</script>
+
+</body>
+</html>
